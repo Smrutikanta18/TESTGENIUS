@@ -1,0 +1,24 @@
+<body>
+    <div class="bootstrap-wrapper">
+        <div class="container mt-2">
+            <h1> Your Profile Details</h1>
+            <div class="container text-center">
+                <img src="../../../assets/profile.png" alt="" class="profile-image" />
+                <h1>{{user.firstname}} {{user.lastname}}</h1>
+                <p>{{user.authorities[0].authority}} of TESTGENIUS</p>
+            </div>
+            <div class="profile-info">
+                <div class="info-item">
+                    <h2>Contact Information</h2>
+                    <p>Email: {{this.login.getUser().email}}</p>
+                    <p>Phone: +91 {{this.login.getUser().phone}}</p>
+                </div>
+                <div class="info-item">
+                    <h2>Id & Status</h2>
+                    <p>UserId: {{user.id}}</p>
+                    <p>Status: {{user.enabled?"ACTIVE":"NOTACTIVE"}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

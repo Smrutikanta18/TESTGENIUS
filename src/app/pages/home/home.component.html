@@ -1,0 +1,106 @@
+<body>
+    <div class="bootstrap-wrapper">
+        <div class="header" id="header">
+          <h1>WELCOME TO <span id="testGeniusText">TESTGENIUS</span></h1>
+        </div>
+        
+        <div class="hero">
+            <div class="image-container">
+                <button class="arrow-btn" id="prevBtn">&#10094;</button>
+                
+                <div class="image-text-container">
+                    <img class="carousel-image" src="../../../assets/exam1.jpg" alt="Exam Image 1">
+                    <div class="text-overlay">Ready to consume.<br/>Continuous assessment and Continuous improvement</div>
+                </div>
+                
+                <div class="image-text-container">
+                    <img class="carousel-image" src="../../../assets/exam2.jpg" alt="Exam Image 2">
+                    <div class="text-overlay">Ready to consume.<br/>Continuous assessment and Continuous improvement</div>
+                </div>
+                
+                <div class="image-text-container">
+                    <img class="carousel-image" src="../../../assets/exam3.jpg" alt="Exam Image 3">
+                    <div class="text-overlay">Ready to consume.<br/>Continuous assessment and Continuous improvement</div>
+                </div>
+                
+                <div class="image-text-container">
+                    <img class="carousel-image" src="../../../assets/exam4.jpg" alt="Exam Image 5">
+                    <div class="text-overlay">Ready to consume.<br/>Continuous assessment and Continuous improvement
+                    </div>
+                </div>
+                
+                <div class="image-text-container">
+                    <img class="carousel-image" src="../../../assets/exam5.jpg" alt="Exam Image 5">
+                    <div class="text-overlay">Ready to consume.<br/>Continuous assessment and Continuous improvement</div>
+                </div>
+                
+                <button class="arrow-btn" id="nextBtn">&#10095;</button>
+            </div>
+        </div>
+        
+          
+              
+          <div class="features">
+            <div class="feature">
+              <img src="../../../assets/exam4.jpg" alt="Feature 1">
+              <h2>Feature 1</h2>
+              <p>Make data work for you.</p>
+            </div>
+            <div class="feature">
+              <img src="../../../assets/exam3.jpg" alt="Feature 2">
+              <h2>Feature 2</h2>
+              <p>Practice makes you perfect.</p>
+            </div>
+            <div class="feature">
+              <img src="../../../assets/exam2.jpg" alt="Feature 3">
+              <h2>Feature 3</h2>
+              <p>Anytime and Anywhere practice.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="facts-container">
+            <div class="fact-header">
+                Facts
+            </div>
+                <div class="fact-desc">
+                    Data tell story of our success. Successful students and satisfied customers speak for us.
+                </div>
+            
+        
+            <div class="column">
+                <div class="fact" *ngFor="let fact of facts; let i = index">
+                    <div class="fact-title">{{ fact.title }}</div>
+                    <div class="fact-value" [style.width.px]="calculateWidth(fact.value.toString().length)">{{ fact.value }}</div>
+                  </div>
+                </div>
+        </div>
+        
+        <div class="social-media-buttons">
+            <a href="https://www.facebook.com" target="_blank">
+              <button class="social-button1">Facebook</button>
+            </a>
+            <a href="https://twitter.com" target="_blank">
+              <button class="social-button2">Twitter</button>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+              <button class="social-button3">LinkedIn</button>
+            </a>
+          </div>
+          
+        
+
+        <div class="footer-links">
+          <a href="/">Home   </a>
+          <a href="#">Blogs   </a>
+          <a href="#">About Us   </a>
+          <a href="#">Contact Us   </a>
+          <a href="#">Career   </a>
+          <a href="#">Terms of Services   </a>
+          <a href="#">Privacy Policy   </a>
+        </div>
+      
+        <div class="footer">
+          <p>&copy; Examinations serve as the gateway to success</p>
+        </div>
+    </body>

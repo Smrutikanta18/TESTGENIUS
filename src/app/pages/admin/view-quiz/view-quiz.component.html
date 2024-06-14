@@ -1,0 +1,27 @@
+<body>
+    
+    <header>
+        <h1>Quizzes</h1>
+    </header>
+    <main>
+        <section id="quizzes" class="quiz-container">
+            <div *ngFor="let c of quizzes" class="quiz-box">
+                <h1>{{c.title}}</h1> 
+                <h2>{{c.category.title}}</h2>
+                <p>{{c.description}}</p>
+                <div class="button-container">
+                    <button [routerLink]="'/admin/view-question/'+c.qId+'/'+c.title" class="quiz-button">Questions</button>
+                    <button class="quiz-button">Max Mark: {{c.maxMarks}}</button>
+                    <button class="quiz-button">Questions: {{c.numberOfQuestions}}</button>
+                    <button [routerLink]="'/admin/quiz/' + c.qId" class="quiz-button">Update</button>
+                    <mat-icon (click)="deleteQuiz(c.qId)">delete</mat-icon>
+                </div>
+            </div>
+        </section>
+        <button (click)="NaviagteToAddaqiz()" id="add-quiz-btn" class="add-quiz-btn">Add Quiz</button>
+    </main>
+    <footer>
+        <p>&copy; 2024 TestGenius</p>
+    </footer>
+
+</body>

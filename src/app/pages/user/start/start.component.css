@@ -1,0 +1,142 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.quiz-row {
+  flex-direction: column;
+}
+
+.timer-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+  width: 100%;
+  text-align: center;
+}
+
+.timer-container p {
+  margin: 0;
+}
+
+.spinner-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+.quiz-container {
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.quiz-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.question-container {
+  margin-bottom: 20px;
+}
+
+.question-content {
+  font-size: 18px;
+}
+
+.option-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding: 10px;
+}
+
+.option-label {
+  margin-left: 10px;
+}
+
+.submit-button {
+  display: block;
+  width: 10%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  margin-left: 800px;
+  margin-top: 20px;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.result-container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.result-item {
+  margin-bottom: 15px;
+}
+
+.print-button, .home-button {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.print-button:hover, .home-button:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  .option {
+      width: 100%;
+  }
+
+  .submit-button, .print-button, .home-button {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,48 @@
+.full-width{
+    width: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #091929; 
+}
+.bootstrap-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.register-container {
+    background-color: #ffffff; 
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(26, 97, 30, 0.1);
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+}
+.register-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.register-form {
+    text-align: center;
+}
+.register-input {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.register-button {
+    margin-top: 20px;
+}
+.register-image {
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.register-button button:hover {
+    background-color: #0e7a25;
+    color: #ffffff;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}

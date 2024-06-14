@@ -1,0 +1,122 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+}
+
+.bootstrap-wrapper .container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background:  #d6d8d4 ;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.mt20 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    height: 70px;
+    color: white;
+    text-align: center;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideIn 1s ease-in-out;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.col-md-4 {
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    animation: zoomIn 1s ease-in-out;
+}
+
+mat-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+mat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+mat-card-header {
+    display: flex;
+    align-items: center;
+}
+
+.example-header-image {
+    background: url('../../../../assets/back3.jpg') no-repeat center/cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+mat-card-title {
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+mat-card-subtitle {
+    margin-left: 10px;
+    color: #666;
+}
+
+mat-card-content .truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    height: 60px;
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+button[mat-button] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button[mat-button]:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}

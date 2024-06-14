@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    background: url('../../../../assets/exam3.jpg') no-repeat center center fixed;
+    margin-top: 10px;
+    padding: 0;
+    position: relative; /* Ensure the body is positioned relative for the overlay */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    z-index: -1;
+}
+
+.bootstrap-wrapper {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #d6ddc6;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Ensure content is above the overlay */
+    position: relative;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.register-input {
+    width: 70%;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}

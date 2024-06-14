@@ -1,0 +1,28 @@
+<body>
+    <div class="container">
+        <div class="instruction-box">
+            <h1>Welcome to the TESTGENIUS Test</h1>
+            <h1><b>{{Quiz.title}}</b></h1>
+            <h2>Instructions</h2>
+            <ul>
+                <li>Read each question carefully.</li>
+                <li>You have <b>{{Quiz.numberOfQuestions}} minutes</b> to complete the quiz.</li>
+                <li>There are a total of <b>{{Quiz.numberOfQuestions}} questions</b>.</li>
+                <li>Each question carries <b>{{Quiz.maxMarks / Quiz.numberOfQuestions}}</b> mark.</li>
+                <li>Total mark is <b>{{Quiz.maxMarks}}.</b></li>
+                <li>{{Quiz.description}}</li>
+                <li>No negative marking for incorrect answers.</li>
+                <li>Scroll down to move next Question.</li>
+                <li>Click <b>"Submit"</b> button to submit the Quiz.</li>
+                <li>report of result automatically generated in the form of PDF cpoy.</li>
+                <li>Ensure a stable internet connection throughout the quiz.</li>
+                <li>Click the <b>"Start Quiz"</b> button to begin.</li>
+            </ul>
+            <button class="start-btn" routerLink="/user-dashboard/0">Back</button>
+
+        </div>
+    </div>
+</body>
+
+
+

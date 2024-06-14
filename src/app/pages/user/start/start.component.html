@@ -1,0 +1,62 @@
+<div *ngIf="Question; else loading">
+  <div class="row quiz-row" *ngIf="!isSubmit">
+      <div class="timer-container">
+          <br>
+          <p><strong>Time Left:</strong></p>
+          <h1>{{getTime()}}</h1>
+          <div class="spinner-wrapper">
+              <mat-spinner mode="determinate" [value]="(timer / (this.Question.length * 2 * 60)) * 100"></mat-spinner>
+          </div>
+      </div>
+      <div class="quiz-container">
+          <h1><span class="quiz-title">{{ Question[0].quiz.title }}</span></h1>
+          <div *ngFor="let q of Question; let i=index" class="question-container">
+              <p class="question-content"><strong>Q.{{i+1}}) <span [innerHTML]="q.content"></span></strong></p>
+              <mat-divider></mat-divider>
+              <div class="row option-row">
+                  <div class="col-md-6 option">
+                      <input [(ngModel)]="q.givenAnswer" type="radio" [value]="q.option1" [name]="i.toString()" id="option1-{{i}}">
+                      <label for="option1-{{i}}" class="option-label">{{q.option1}}</label>
+                  </div>
+                  <div class="col-md-6 option">
+                      <input [(ngModel)]="q.givenAnswer" type="radio" [value]="q.option2" [name]="i.toString()" id="option2-{{i}}">
+                      <label for="option2-{{i}}" class="option-label">{{q.option2}}</label>
+                  </div>
+              </div>
+              <div class="row option-row">
+                  <div class="col-md-6 option">
+                      <input [(ngModel)]="q.givenAnswer" type="radio" [value]="q.option3" [name]="i.toString()" id="option3-{{i}}">
+                      <label for="option3-{{i}}" class="option-label">{{q.option3}}</label>
+                  </div>
+                  <div class="col-md-6 option">
+                      <input [(ngModel)]="q.givenAnswer" type="radio" [value]="q.option4" [name]="i.toString()" id="option4-{{i}}">
+                      <label for="option4-{{i}}" class="option-label">{{q.option4}}</label>
+                  </div>
+              </div>
+          </div>
+          <button class="submit-button" (click)="submitQuiz()">Submit</button>
+      </div>
+  </div>
+
+  <div class="result-container" *ngIf="isSubmit">
+      <h1>Exam Results</h1>
+      <div class="result-item">
+          <p><strong>Full Marks:</strong> {{Question[0].quiz.maxMarks}}</p>
+      </div>
+      <div class="result-item">
+          <p><strong>Marks Scored:</strong> {{marksGot}}</p>
+      </div>
+      <div class="result-item">
+          <p><strong>Correct Answers:</strong> {{correctAnswers}}</p>
+      </div>
+      <div class="result-item">
+          <p><strong>Questions Attempted:</strong> {{attempted}}</p>
+      </div>
+      <button class="print-button" onclick="window.print()">Print Results</button>
+      <button class="home-button" routerLink="/user-dashboard/user-home">Home</button>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p>Loading question...</p>
+</ng-template>

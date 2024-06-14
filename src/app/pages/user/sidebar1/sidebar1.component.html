@@ -1,0 +1,10 @@
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a [routerLink]="'/user-dashboard/user-home'">Home</a></li>
+            <li><a routerLink="/user-dashboard/profile1">Profile</a></li>
+            <li [routerLink]="'/user-dashboard/'+c.cid" *ngFor="let c of categories"><a>{{c.title}}</a></li>
+            
+        </ul>
+    </div>
+</body>

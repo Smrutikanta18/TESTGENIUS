@@ -1,0 +1,90 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Quiz Container */
+.quiz-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Quiz Box */
+.quiz-box {
+    width: calc(50% - 20px);
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    transition: box-shadow 0.3s;
+}
+
+.quiz-box:hover {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-box h2 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.quiz-box p {
+    margin-bottom: 10px;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Quiz Button */
+.quiz-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px; /* Add margin to create gap between buttons */
+}
+
+
+.quiz-button:hover {
+    background-color: #0056b3;
+}
+
+/* Add Quiz Button */
+.add-quiz-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 20px auto; 
+    display: block;
+}
+
+.add-quiz-btn:hover {
+    background-color: #0056b3;
+}
+.quiz-button:last-child {
+    margin-right: 0; /* Remove margin from the last button to prevent extra gap */
+}

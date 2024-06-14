@@ -1,0 +1,80 @@
+.category-card {
+    padding: 20px;
+    background: url('../../../../assets/exam3.jpg') no-repeat center center fixed;
+}
+
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.category-item {
+    width: calc(33.33% - 20px);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.category-item:hover {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    background-color: #afc939;
+    color: black;
+}
+
+.category-item:hover .category-title,
+.category-item:hover .category-description {
+    color: black;
+}
+
+.category-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #666;
+}
+
+.category-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.category-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: inherit;
+}
+
+.category-description {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #666;
+    color: inherit;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin-left: 170px;
+    margin-right: 200px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+.ranga {
+    color: white;
+    
+    font-size: 2em; 
+    text-align: center; 
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+  }
+  

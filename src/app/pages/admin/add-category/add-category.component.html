@@ -1,0 +1,32 @@
+<body>
+    <div class="bootstrap-wrapper">
+        <div class="container">
+            <h2>Add category here</h2>
+            <div class="container">
+                <form (ngSubmit)="formSubmit()">
+                <mat-form-field class="register-input ml-10 mr-10" appearance="outline">
+                    <mat-label>Title</mat-label>
+                    <input required
+                    type="text"
+                    name="title"
+                    matInput
+                    [(ngModel)]="category.title"
+                    placeholder="Enter title">
+                </mat-form-field>
+                <mat-form-field class="register-input ml-10 mr-10" appearance="outline">
+                    <mat-label>Description</mat-label>
+                    <textarea required
+                    name="description"
+                    matInput
+                    [(ngModel)]="category.description"
+                    placeholder="Write Description"
+                    rows="5"></textarea>
+                </mat-form-field>
+                <div class="register-button text-center">
+                    <button type="submit" mat-flat-button color="accent">Add</button>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+</body>

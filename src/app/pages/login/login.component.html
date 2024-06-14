@@ -1,0 +1,34 @@
+<body class="custom-body">
+    <div class="bootstrap-wrapper">
+        <div class="container custom-container">
+            <div class="custom-header">
+                <img class="custom-image" src="../../../assets/signup.jpg" alt="Signup Image">
+                <h1>Login Here</h1>
+                    <div class="register-form">
+                        <form  (ngSubmit)="formSubmit()">
+                            <mat-form-field class="register-input ml-10 mr-10" appearance="outline">
+                                <mat-label>UserName</mat-label>
+                                <input required
+                                [(ngModel)]="loginData.username"
+                                name="username"
+                                matInput
+                                placeholder="Enter username">
+                            </mat-form-field>
+                            <mat-form-field class="register-input ml-10 mr-10" appearance="outline">
+                                <mat-label>Password</mat-label>
+                                <input required
+                                type="password"
+                                [(ngModel)]="loginData.password"
+                                name="password"
+                                matInput
+                                placeholder="Enter password">
+                            </mat-form-field>
+                            <div class="register-button">
+                                <button type="submit" mat-flat-button color="accent">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>

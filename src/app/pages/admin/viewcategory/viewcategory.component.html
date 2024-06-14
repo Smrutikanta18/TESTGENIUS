@@ -1,0 +1,16 @@
+<mat-card class="category-card">
+    <h1 class="ranga"><b>ALL CATEGORIES</b></h1>
+    <div class="category-container">
+        <div *ngFor="let c of categories" class="category-item">
+            
+            <div class="category-content">
+                <div class="category-title">{{c.title}}</div>
+                <div class="category-description">{{c.description}}</div>
+                <button (click)="deleteQuiz(c.cid)">delete</button>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center mt20">
+        <button (click)="NaviagteToAddcategory()">ADD CATEGORY</button>
+    </div>
+</mat-card>

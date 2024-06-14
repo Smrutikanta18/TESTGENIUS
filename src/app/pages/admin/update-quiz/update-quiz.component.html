@@ -1,0 +1,71 @@
+<body>
+    <div class="bootstrap-wrapper">
+        <div class="container">
+            <h2>Update Quiz</h2>
+            <div class="container">
+                <form (submit)="updateQuiz()">
+                    <mat-form-field class="register-input ml-10 mr-10" appearance="fill">
+                        <mat-label>Title</mat-label>
+                        <input required
+                        type="text"
+                        [(ngModel)]="quiz.title"
+                        name="title"
+                        matInput
+                        placeholder="Enter title">
+                    </mat-form-field>
+                    <mat-form-field class="register-input ml-10 mr-10" appearance="fill">
+                        <mat-label>Description</mat-label>
+                        <textarea required
+                        name="description"
+                        [(ngModel)]="quiz.description"
+                        matInput
+                        placeholder="Write Description"
+                        rows="5"></textarea>
+                    </mat-form-field>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="register-input ml-10 mr-10" appearance="fill">
+                                <mat-label>Max mark</mat-label>
+                                <input required
+                                [(ngModel)]="quiz.maxMarks"
+                                type="text"
+                                name="maxMark"
+                                matInput
+                                placeholder="Enter maxMark">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field class="register-input ml-10 mr-10" appearance="fill">
+                                <mat-label>Number of questions</mat-label>
+                                <input required
+                                type="text"
+                                [(ngModel)]="quiz.numberOfQuestions"
+                                name="numberOfQuestions"
+                                matInput
+                                placeholder="Enter numberOfQuestions">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <mat-slide-toggle
+                    name="active"
+                    class="register-input"
+                    [(ngModel)]="quiz.active"
+                    >
+                    Publish Status
+                    </mat-slide-toggle>
+
+                    <mat-form-field register-input>
+                        <mat-label>Categories</mat-label>
+                        <mat-select [(ngModel)]="quiz.category.cid" name="category">
+                            @for (c of categories; track c) {
+                                <mat-option [value]="c.cid">{{c.title}}</mat-option>}
+                        </mat-select>
+                      </mat-form-field>
+
+                    <div class="register-button text-center">
+                        <button type="submit" mat-flat-button color="accent">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

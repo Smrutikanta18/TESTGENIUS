@@ -1,0 +1,46 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: url('../../../../assets/exam1.jpg') no-repeat center center fixed;
+    color: white;
+
+}
+mat-card {
+    background-color: #f9f9f9;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+mat-card-header {
+    background-color: #673ab7;
+    color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 16px;
+}
+mat-card-subtitle {
+    font-size: 1.2em;
+    color: white;
+}
+mat-form-field {
+    width: 100%;
+    color: white;
+}
+.example-full-width {
+    width: 100%;
+}
+.submit-btn {
+    background-color: #673ab7;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+.submit-btn:hover {
+    background-color: #5e35b1;
+}

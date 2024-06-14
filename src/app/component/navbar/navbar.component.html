@@ -1,0 +1,41 @@
+<mat-toolbar color="warn">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon><a href="/">menu_book</a></mat-icon>
+    </button>
+    <span>TESTGENIUS</span>
+    <span class="example-spacer"></span>
+    <a 
+    *ngIf="!isLoggedIn"
+    href="/login"
+     mat-icon-button
+      class="example-icon favorite-icon"
+       aria-label="Example icon-button with heart icon">
+      <button style="font-size: 20px;">LOGIN</button> 
+    </a>
+    <a 
+    *ngIf="!isLoggedIn"
+    href="/signup" 
+    mat-icon-button 
+    class="example-icon favorite-icon" 
+    aria-label="Example icon-button with heart icon">
+       <button style="font-size: 20px;">SignUp</button> 
+      </a>
+
+      <a
+      *ngIf="isLoggedIn && user"
+      mat-icon-button 
+      class="example-icon favorite-icon" 
+      aria-label="Example icon-button with heart icon">
+         <button (click)="navigateToHome()" style="font-size: 20px;">{{ this.login.getUser().username }}</button> 
+        </a>
+
+      <a 
+      (click)="logout()"
+      *ngIf="isLoggedIn"
+      mat-icon-button 
+      class="example-icon favorite-icon" 
+      aria-label="Example icon-button with heart icon">
+         <button style="font-size: 20px;">Logout</button> 
+        </a>
+  </mat-toolbar>
+  
