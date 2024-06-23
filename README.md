@@ -11,13 +11,16 @@
 
 
   Architecture :-
+  
     The TestGenius app follows a client-server architecture:
+    
       Frontend: The Angular application serves the user interface and communicates with the backend API.
       Backend: The Spring Boot application handles the business logic, processes requests from the frontend, and interacts with the MySQL database.
       Database: MySQL stores user data, exam questions, results, and other relevant information.
 
 
   Prerequisites for Installation :-
+  
     Java Development Kit (JDK) 8 or higher
     Node.js and npm (Node Package Manager)
     MySQL server
